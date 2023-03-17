@@ -1,13 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const CustomText = ({ text, para, img, img2 }) => {
+  
   const textVariants = {
     initial: { x: -50, opacity: 0 },
     animate: { x: 0, opacity: 1 },
   };
+
+
   return (
     <motion.div
       className="mt-[120px] md:mt-[12.5%]"
@@ -15,7 +17,7 @@ const CustomText = ({ text, para, img, img2 }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="flex items-center justify-between flex-col md:flex-row">
+      <div className='flex items-center justify-between flex-col md:flex-row'>
         <div className="md:w-[45%] w-full">
           <div className="md:max-w-[420px]">
             <motion.h1
@@ -25,7 +27,6 @@ const CustomText = ({ text, para, img, img2 }) => {
               transition={{ duration: 0.5 }}
               className="text-primary-color font-black text-[2rem] md:text-4xl mb-[10px] md:mb-[20px] text-center md:text-left"
             >
-              {/* leading-[1.38] text-4xl mb-5 font-black text-primary-color flex items-center justify-center */}
               <span>{text}</span>
             </motion.h1>
             <motion.p
@@ -40,12 +41,15 @@ const CustomText = ({ text, para, img, img2 }) => {
           </div>
         </div>
         <div className="w-full md:w-[55%] relative mt-[40px]">
-          <Image
+          <motion.img
             src={img}
             height={565}
             width={498}
             alt="image"
             className="block"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
           />
           <motion.img
             src={img2}
