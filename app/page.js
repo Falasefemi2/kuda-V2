@@ -12,7 +12,7 @@ const page = () => {
       </section>
       <section className='max-w-[1180px] w-full pt-[40px] px-10 pb-[60px] container mx-auto mt-[65px]'>
         <Hero />
-        <CustomText />
+        <CustomText text='Save' para='Putting money away for the future is smart but it takes discipline - something humans don’t have in abundance. We’re using technology to solve that by automating saving. You set an amount to save and the Kuda app takes care of the rest, prompt interest payout included.' img='' />
         <Messages />
         <MoneyApp />
         <Footer />

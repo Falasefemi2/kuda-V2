@@ -27,7 +27,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        "primary-color": "var(--primaryColor)"
+        "primary-color": "var(--primaryColor)",
+        "black-color": "var(--blackColor)"
       }
     },
   },
