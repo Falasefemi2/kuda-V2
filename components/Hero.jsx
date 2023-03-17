@@ -52,12 +52,14 @@ const Hero = () => {
                 src="/appstore.png"
                 height={100}
                 width={100}
+                alt="app"
                 className="w-28"
               />
               <Image
                 src="/googleplaystore.png"
                 height={100}
                 width={100}
+                alt="google"
                 className="w-28"
               />
             </motion.div>
