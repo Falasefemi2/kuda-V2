@@ -1,5 +1,3 @@
-her
-
 "use client";
 
 import Link from "next/link";
@@ -48,10 +46,20 @@ const Hero = () => {
               initial="initial"
               animate="animate"
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:hidden text-center my-3 flex gap-3 justify-center"
+              className="md:hidden text-center my-5 flex gap-3 justify-center"
             >
-              <Image src="/googleplay.png" height={100} width={100}/>
-              <Image src="/appstore.png" height={100} width={100} />
+              <Image
+                src="/appstore.png"
+                height={100}
+                width={100}
+                className="w-28"
+              />
+              <Image
+                src="/googleplaystore.png"
+                height={100}
+                width={100}
+                className="w-28"
+              />
             </motion.div>
 
             <motion.div
