@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -9,21 +10,20 @@ const Hero = () => {
     animate: { x: 0, opacity: 1 },
   };
 
-
   return (
     <div className="flex min-h-[555px] overflow-hidden">
-      <div className="flex items-center justify-between min-h-[540px] overflow-hidden w-full">
-        <div className="w-[48%]">
-          <div className="max-w-[396px]">
+      <div className="flex flex-col md:flex-row items-center justify-between min-h-[540px] overflow-hidden w-full">
+        <div className="w-[100%] md:w-[48%] mx-auto">
+          <div className="pt-2 text-center md:text-left max-w-[420px]mx-auto">
             <motion.h1
               variants={textVariants}
               initial="initial"
               animate="animate"
               transition={{ duration: 0.5 }}
-              className="font-black text-primary-color mb-5 text-5xl"
+              className="font-black text-primary-color md:mb-5 text-[32px] md:text-4xl"
             >
               <span>
-                The Money app
+                The money app
                 <br />
                 for Africans.
               </span>
@@ -33,7 +33,7 @@ const Hero = () => {
               initial="initial"
               animate="animate"
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mb-5 text-xl font-semibold leading-6"
+              className="md:mb-5 text-md md:text-xl font-semibold leading-6"
             >
               <span>
                 Save, spend, send and invest money
@@ -45,11 +45,33 @@ const Hero = () => {
               variants={textVariants}
               initial="initial"
               animate="animate"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="md:hidden text-center my-5 flex gap-3 justify-center"
+            >
+              <Image
+                src="/appstore.png"
+                height={100}
+                width={100}
+                className="w-28"
+              />
+              <Image
+                src="/googleplaystore.png"
+                height={100}
+                width={100}
+                className="w-28"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={textVariants}
+              initial="initial"
+              animate="animate"
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="hidden md:block"
             >
               <Link
                 href="/joinkuda"
-                className="mt-8 max-w-[152px] text-base w-full font-bold leading-[1] flex items-center p-[15px]  justify-center text-white bg-primary-color h-12 rounded-[10px]"
+                className="mt-8 max-w-[152px] text-base w-full font-bold leading-[1] flex items-center p-[15px]  justify-center text-white bg-primary-color h-12 rounded-[10px] text-center md:text-left mx-auto md:mx-0"
               >
                 Join Kuda
               </Link>
